@@ -18,7 +18,7 @@ jobs:
         uses: cypress-io/github-action@v5.1.0 # use the explicit version number
         with:
           build: npm run build
-          start: npm run e2e
+          start: npm start
           browser: chrome
           record: true
           parallel: true
