@@ -4,6 +4,10 @@ on: workflow_dispatch
 
 jobs:
   cypress-run:
+    strategy:
+      fail-fast: false # https://github.com/cypress-io/github-action/issues/48
+      matrix:
+        containers: [1, 2] # Uses 2 parallel instances
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -14,7 +18,7 @@ jobs:
         uses: cypress-io/github-action@v5.1.0 # use the explicit version number
         with:
           build: npm run build
-          start: npm start
+          start: npm run e2e
           browser: chrome
           record: true
           parallel: true
