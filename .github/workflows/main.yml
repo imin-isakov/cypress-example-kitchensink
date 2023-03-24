@@ -22,7 +22,6 @@ jobs:
           start: npm start
           browser: chrome
           record: true
-          parallel: true
           group: Chrome
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
