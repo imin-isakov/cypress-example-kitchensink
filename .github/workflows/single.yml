@@ -61,7 +61,9 @@ jobs:
 
     # Starts local server, then runs Cypress tests and records results on the dashboard
     - name: Cypress tests
-      run: npm run test:ci:record
+      run: |
+        npm start &
+        npx cypress run --record --parallel --browser chrome --group "Parallel 2x"
       env:
         # place your secret record key at
         # https://github.com/cypress-io/cypress-example-kitchensink/settings/secrets
