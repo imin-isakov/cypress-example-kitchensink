@@ -124,21 +124,21 @@ jobs:
           CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
           TERM: xterm
 
-      # Save videos and screenshots as test artifacts
-      # https://github.com/actions/upload-artifact
-      - uses: actions/upload-artifact@v3
-        # there might be no screenshots created when:
-        # - there are no test failures
-        # so only upload screenshots if previous step has failed
-        if: failure()
-        with:
-          name: screenshots
-          path: cypress/screenshots
-      # video should always be generated
-      - uses: actions/upload-artifact@v3
-        with:
-          name: videos
-          path: cypress/videos
+      # # Save videos and screenshots as test artifacts
+      # # https://github.com/actions/upload-artifact
+      # - uses: actions/upload-artifact@v3
+      #   # there might be no screenshots created when:
+      #   # - there are no test failures
+      #   # so only upload screenshots if previous step has failed
+      #   if: failure()
+      #   with:
+      #     name: screenshots
+      #     path: cypress/screenshots
+      # # video should always be generated
+      # - uses: actions/upload-artifact@v3
+      #   with:
+      #     name: videos
+      #     path: cypress/videos
 
   # test2:
   #   name: Cypress test 2
