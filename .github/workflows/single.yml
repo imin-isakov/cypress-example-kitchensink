@@ -65,7 +65,8 @@ jobs:
       env:
         # place your secret record key at
         # https://github.com/cypress-io/cypress-example-kitchensink/settings/secrets
-        CYPRESS_RECORD_KEY: ${{ secrets.dashboardRecordKey }}
+        CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+        CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
         TERM: xterm
 
     # Save videos and screenshots as test artifacts
