@@ -82,6 +82,7 @@ jobs:
         uses: cypress-io/github-action@v5.1.0
         with:
           browser: chrome
+          record: true
         env:
           ENV: preprod
         
