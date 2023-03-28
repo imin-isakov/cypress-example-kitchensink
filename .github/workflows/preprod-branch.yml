@@ -2,7 +2,7 @@ name: Preprod branch
 on:
   push:
     branches:
-      - master
+      - stage
 jobs:
   Test-application:
     uses: ./.github/workflows/devPortal.yml
