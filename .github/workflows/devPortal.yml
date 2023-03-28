@@ -84,10 +84,10 @@ jobs:
         uses: cypress-io/github-action@v5.1.0
         with:
           browser: chrome
-          # record: true
+          record: true
           group: chrome
         env:
+          ENV: preprod
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
-          ENV: ${{ inputs.environment }}
         
