@@ -78,7 +78,10 @@ jobs:
           npx cypress cache path
           npx cypress cache list
 
-      # Starts local server, then runs Cypress tests and records results on the dashboard
       - name: Cypress tests
-        run: ENV=preprod npx cypress run --browser chrome
+        uses: cypress-io/github-action@v5.1.0
+        with:
+          browser: chrome
+        env:
+          ENV: preprod
         
