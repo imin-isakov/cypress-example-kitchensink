@@ -1,0 +1,11 @@
+name: Preprod branch
+on:
+  push:
+    branches:
+      - master
+jobs:
+  Test-application:
+    uses: ./.github/workflows/devPortal.yml
+    with:
+      environment: preprod
+  
