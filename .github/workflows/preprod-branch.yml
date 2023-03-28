@@ -6,6 +6,6 @@ on:
 jobs:
   Test-application:
     uses: ./.github/workflows/devPortal.yml
-    with:
-      environment: preprod
+    # with:
+    #   environment: preprod
   

@@ -2,10 +2,10 @@ name: Run E2E tests
 
 on:
   workflow_call:
-    inputs:
-      environment:
-        required: true
-        type: string 
+    # inputs:
+    #   environment:
+    #     required: true
+    #     type: string 
 
 jobs:
   Run-tests:
