@@ -4,8 +4,12 @@ on:
     branches:
       - stage
 jobs:
+  Install:
+    uses: ./.github/workflows/install.yml
   Test-application:
+    needs: Install
     uses: ./.github/workflows/devPortal.yml
-    # with:
-    #   environment: preprod
+    with:
+      environment: preprod
+    secrets: inherit
   
