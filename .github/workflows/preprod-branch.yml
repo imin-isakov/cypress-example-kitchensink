@@ -2,7 +2,7 @@ name: Preprod branch
 on:
   push:
     branches:
-      - stage
+      - master
 jobs:
   Install:
     uses: ./.github/workflows/install.yml
