@@ -8,9 +8,7 @@ on:
         type: string 
 
 jobs:
-  test:
-    name: Cypress test
-    needs: Run-tests
+  Cypress test:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
