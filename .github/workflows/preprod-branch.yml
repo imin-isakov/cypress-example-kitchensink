@@ -11,4 +11,5 @@ jobs:
     uses: ./.github/workflows/devPortal.yml
     with:
       environment: preprod
+    secrets: inherit
   
