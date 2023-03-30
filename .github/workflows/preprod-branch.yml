@@ -8,6 +8,6 @@ jobs:
     needs: Install
     uses: ./.github/workflows/devPortal.yml
     with:
-      environment: stage
+      environment: prod
     secrets: inherit
   
