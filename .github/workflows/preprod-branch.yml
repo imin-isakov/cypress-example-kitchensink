@@ -1,8 +1,6 @@
 name: Preprod branch
-on:
-  push:
-    branches:
-      - master
+on: workflow_dispatch
+
 jobs:
   Install:
     uses: ./.github/workflows/install.yml
