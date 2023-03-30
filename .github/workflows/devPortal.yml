@@ -21,13 +21,13 @@ jobs:
           node-version: 14
 
       # Restore just local node_modules and the Cypress binary archives.
-      - name: Restore cached Cypress binary
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache/Cypress
-          key: cypress-${{ runner.os }}-cypress-${{ github.ref }}-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            cypress-${{ runner.os }}-cypress-${{ github.ref }}-${{ hashFiles('**/package.json') }}
+      # - name: Restore cached Cypress binary
+      #   uses: actions/cache@v3
+      #   with:
+      #     path: ~/.cache/Cypress
+      #     key: cypress-${{ runner.os }}-cypress-${{ github.ref }}-${{ hashFiles('**/package.json') }}
+      #     restore-keys: |
+      #       cypress-${{ runner.os }}-cypress-${{ github.ref }}-${{ hashFiles('**/package.json') }}
 
       - name: Restore cached node_modules
         id: restore-cached-node-modules
